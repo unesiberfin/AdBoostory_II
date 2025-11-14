@@ -1,0 +1,505 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+.nav-left .logo {
+  height: 26px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-center a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: #2721f6;
+}
+
+.contact-btn {
+  color: #2721f6;
+  border: 2px solid #2721f6;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background: #2721f6;
+  color: #fff;
+}
+
+
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 60px 120px;
+  min-height: 100vh;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1rem;
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.cta-group {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #2721f6;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 2px solid #2721f6;
+  color: #2721f6;
+  padding: 14px 32px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: #2721f6;
+  color: #fff;
+}
+
+
+/* ================= HERO — RIGHT CARDS ================= */
+.hero-right {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ==========================
+   SHUFFLED STACK LAYOUT
+========================== */
+
+.card-stack {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin-top: 20px;
+  }
+  
+  /*cards */
+  .stack-card {
+    position: absolute;
+    width: 300px;
+    height: 325px;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  }
+  
+  /* Match your existing image styling */
+  .stack-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ===== Shuffled positions ===== */
+  .card-1 {
+    top: 0;
+    left: -50px;;
+    transform: rotate(-6deg);
+    z-index: 3;
+  }
+  
+  .card-2 {
+    top: 50px;
+    left: 210px;
+    transform: rotate(4deg);
+    z-index: 2;
+  }
+  
+  .card-3 {
+    top: 260px;
+    left: 70px;
+    transform: rotate(3deg);
+    z-index: 1;
+  }
+  
+  /* ===== Hover effect ===== */
+  .stack-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+    box-shadow: 0 35px 60px rgba(0,0,0,0.28);
+  }
+
+/* =========================== SCROLL GALLERY ============================ */
+.scroll-gallery {
+    position: relative;
+    height: 120vh; /* Makes the scroll effect visible */
+    overflow: hidden;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .gallery-track {
+    position: sticky;
+    top: 120px;  /* stays in place while the page scrolls */
+    display: flex;
+    gap: 30px;
+    padding: 0 5vw;
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .gallery-card {
+    width: 260px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 30px;
+    flex-shrink: 0;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-card:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
+
+
+/* ================= PORTFOLIO CARDS ================= */
+  
+.portfolio-card {
+  width: 340px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 20px;
+  transform: rotate(-6deg);
+  transition: all 0.4s ease;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* === Infinite Scroll Loop Gallery === */
+
+.scroll-loop-gallery {
+    width: 100%;
+    overflow: hidden;
+    padding: 120px 0;
+    position: relative;
+  }
+  
+  .gallery-track {
+    display: flex;
+    gap: 40px;
+    will-change: transform;
+  }
+  
+  .g-card {
+    width: 260px;
+    height: 360px;
+    border-radius: 28px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
+  
+  .g-card:hover {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  
+  .g-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+/* ========================================
+   INTERACTIVE PACKAGES SECTION
+======================================== */
+
+.packages-interactive {
+    display: flex;
+    gap: 3rem;
+    padding: 150px 10%;
+    align-items: flex-start;
+    color: white;
+  }
+  
+  /* LEFT COLUMN — PACKAGE TABS */
+  .packages-left {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .package-tab {
+    padding: 25px 30px;
+    border-radius: 22px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+  }
+  
+  .package-tab h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  .package-tab p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+  
+  /* ACTIVE TAB */
+  .package-tab.active {
+    background: rgba(39, 33, 246, 0.25);
+    border-color: #2721f6;
+    transform: translateX(10px) scale(1.03);
+  }
+  
+  /* HOVER */
+  .package-tab:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  /* RIGHT COLUMN — DYNAMIC CONTENT CARD */
+  .packages-right {
+    width: 67%;
+    position: relative;
+    min-height: 350px;
+  }
+  
+  .package-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    padding: 40px 40px;
+    border-radius: 25px;
+  
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(18px);
+    opacity: 0;
+    transform: translateX(-25px);
+    pointer-events: none;
+  
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  /* ACTIVE PANEL */
+  .package-content.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+  
+  /* CONTENT TEXT */
+  .package-content h2 {
+    margin-bottom: 18px;
+    font-size: 1.9rem;
+    font-weight: 800;
+  }
+  
+  .package-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  
+  .package-content ul li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+  
+  /* CTA BUTTON */
+  .btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2721f6;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #1c18b3;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .packages-interactive {
+      flex-direction: column;
+    }
+  
+    .packages-left, .packages-right {
+      width: 100%;
+    }
+  
+    .package-tab.active {
+      transform: translateX(0);
+    }
+  }
+
+  
+
+/* ================= CONTACT FORM ================= */
+.contact-section {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.4rem;
+}
+
+.contact-form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+/* ===== FORM STATUS BUBBLE ===== */
+.form-status {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  color: white;
+}
+
+/* ===== INPUT ERROR STATE ===== */
+input.error, textarea.error {
+  border: 2px solid #ff4e4e !important;
+  animation: shake 0.25s ease;
+}
+
+/* Shake animation when error */
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-4px); }
+  50%  { transform: translateX(4px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== SUCCESS GLOW ON THE FORM ===== */
+form.success {
+  animation: successGlow 1s ease forwards;
+}
+
+@keyframes successGlow {
+  0%   { box-shadow: 0 0 0 rgba(39,33,246,0); }
+  50%  { box-shadow: 0 0 40px rgba(39,33,246,0.6); }
+  100% { box-shadow: 0 0 0 rgba(39,33,246,0); }
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #aaa;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
