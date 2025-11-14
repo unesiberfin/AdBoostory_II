@@ -21,11 +21,11 @@
       <a href="index.html" class="active">Home</a>
       <a href="#packages">Packages</a>
       <a href="#contact">Contact</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
     </nav>
 
     <div class="nav-right">
-      <a href="#contact" class="contact-btn">Contact Us</a>
+      <a href="#contact" class="contact-btn">Get a Free Quote</a>
     </div>
   </header>
 
@@ -145,27 +145,31 @@
   
   
 
-  <!-- ================= CONTACT FORM ================= -->
-  <form id="contactForm"
-  action="https://formsubmit.co/marketing.adboostory@gmail.com"
-  method="POST"
-  class="contact-form">
+<!-- ================= CONTACT FORM ================= -->
+<section id="contact" class="contact-section">
 
-<!-- FormSubmit hidden fields -->
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+    <h2 class="contact-title">Contact us</h2>
 
-<input type="text" name="Full Name" placeholder="Full Name" required />
-<input type="email" name="Email" placeholder="Email Address" required />
-<textarea name="Message" placeholder="Your Message" required></textarea>
+    <p class="contact-subtext">Tell us about your business, we’ll reply within 24 hours.</p>
+  
+    <form id="contactForm"
 
-<button type="submit" class="btn-primary">Submit</button>
+      action="https://formsubmit.co/marketing.adboostory@gmail.com"
+      method="POST"
+      class="contact-form">   
+      <!-- FormSubmit hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">   
+      <input type="text" name="Full Name" placeholder="Full Name" required />
+      <input type="email" name="Email" placeholder="Email Address" required />
+      <textarea name="Message" placeholder="Your Message & Contact Information" required></textarea>    
+      <button type="submit" class="btn-primary">Submit</button>   
+      <!-- Animated Status Messages -->
+      <div id="formStatus" class="form-status"></div>
+    </form>
 
-<!-- Animated Status Messages -->
-<div id="formStatus" class="form-status"></div>
-</form>
-
+</section>
 
 
 

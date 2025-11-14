@@ -4,12 +4,13 @@
    HERO CENTERED
 ======================= */
 .hero-center-banner {
-    padding-top: 150px;
+    padding-top: 280px;
     padding-bottom: 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
+
   .hero-title {
     font-family: 'Alfa Slab One', serif;
     font-size: 3.5rem;
@@ -28,7 +29,7 @@
   .scroll-indicator {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 180px 0;
   }
   
   .arrow-circle {
@@ -99,7 +100,7 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin-top: 200px;
+    margin-top: 30px;
   
     /* Glass style */
     background: rgba(255, 255, 255, 0.08);

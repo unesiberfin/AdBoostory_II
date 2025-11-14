@@ -134,16 +134,16 @@ body {
 
 .card-stack {
     position: relative;
-    width: 380px;
+    width: 450px;
     height: 500px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   
   /* Use your EXISTING card style */
   .stack-card {
     position: absolute;
-    width: 260px;
-    height: 330px;
+    width: 300px;
+    height: 350px;
     border-radius: 22px;
     overflow: hidden;
     cursor: pointer;
@@ -167,8 +167,8 @@ body {
   }
   
   .card-2 {
-    top: 80px;
-    left: 210px;
+    top: 70px;
+    left: 260px;
     transform: rotate(5deg);
     z-index: 2;
   }
@@ -176,7 +176,7 @@ body {
   .card-3 {
     top: 260px;
     left: 70px;
-    transform: rotate(-3deg);
+    transform: rotate(5deg);
     z-index: 1;
   }
   
@@ -417,7 +417,7 @@ body {
 
 /* ================= CONTACT FORM ================= */
 .contact-section {
-  padding: 120px 60px;
+  padding: 80px 60px 120px 60px;
   text-align: center;
 }
 
@@ -446,6 +446,64 @@ body {
 
 .contact-form textarea {
   height: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#contact {
+  scroll-margin-top: 140px; /* adjust depending on navbar height */
+}
+
+.contact-section {
+  padding: 120px 10%;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  color: #fefefe;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 140px;
+}
+
+.form-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
 }
 
 
