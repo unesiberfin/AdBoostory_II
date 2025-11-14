@@ -48,7 +48,7 @@ body {
 }
 
 .contact-btn {
-  color: #2721f6;
+  color: #efefef;
   border: 2px solid #2721f6;
   padding: 10px 24px;
   border-radius: 20px;
@@ -103,17 +103,18 @@ body {
 }
 
 .btn-outline {
-  border: 2px solid #2721f6;
-  color: #2721f6;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   padding: 14px 32px;
   border-radius: 15px;
   text-decoration: none;
   font-weight: 600;
+  border-radius: 20px;
 }
 
 .btn-outline:hover {
-  background: #2721f6;
-  color: #fff;
+  background: #fff;
+  color: #2721f6;
 }
 
 
@@ -386,10 +387,9 @@ body {
   /* CTA BUTTON */
   .btn-primary {
     display: inline-block;
-    padding: 12px 25px;
     background: #2721f6;
     border-radius: 20px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     transition: background 0.3s ease;
   }
@@ -426,7 +426,7 @@ body {
 }
 
 .contact-form {
-  max-width: 450px;
+  max-width: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;
